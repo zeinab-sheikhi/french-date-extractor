@@ -1,0 +1,5 @@
+datasets==1.11.0
+ollama==0.4.6
+pandas==2.1.1
+spark-nlp==5.5.1
+fsspec==2024.9.0
