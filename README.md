@@ -37,3 +37,59 @@ The main objective is to accurately extract publication dates from French docume
 - **Multiple Dates**: URLs might contain multiple dates (e.g., update date vs. creation date)
 
 ## Project Structure
+
+```
+French-Date-Extractor/
+├── notebooks/          # Contains Jupyter notebooks with solution implementations
+├── requirements.txt    # List of required Python packages
+└── README.md           # Project documentation
+```
+
+## Installation and Running the Project
+
+To set up the project environment and run the notebooks:
+
+1. **Create a Virtual Environment**:
+   ```bash
+   python -m venv venv
+   ```
+
+2. **Activate the Virtual Environment**:
+   - On Unix or macOS:
+     ```bash
+     source venv/bin/activate
+     ```
+   - On Windows:
+     ```bash
+     venv\Scripts\activate
+     ```
+
+3. **Install Required Packages**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run a Jupyter Notebook**:
+   ```bash
+   jupyter notebook
+   ```
+   This will open the Jupyter interface in your browser. Navigate to the `notebooks/` directory and select the desired notebook to run.
+
+## Methods Used
+
+We employed the following methods to extract publication dates:
+
+1. **Trellis API**: Utilized Trellis's API for date extraction.
+2. **SparkNLP**: Applied natural language processing techniques using SparkNLP.
+3. **Prompt Engineering with LLaMA via Ollama**: Implemented prompt engineering with the LLaMA language model running locally through Ollama.
+4. **Prompt Engineering using LangChain and GPT Models**: Leveraged LangChain in conjunction with GPT models for prompt-based date extraction.
+
+## Accuracy of Methods
+
+| Method                                     | Accuracy |
+|--------------------------------------------|----------|
+| Trellis API                                | 77%      |
+| Prompt Engineering using LangChain and GPT | 64%      |
+| Prompt Engineering with LLaMA via Ollama   | 51%      |
+
+This table summarizes the accuracy achieved by each method in extracting publication dates.
